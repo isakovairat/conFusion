@@ -1,41 +1,42 @@
 .row-header {
   margin: 0px auto;
-  padding: 0px 0px;
+  padding: 0px auto;
 }
 
 .row-content {
   margin: 0px auto;
-  padding: 50px 0px;
+  padding: 50px 0px 50px 0px;
   border-bottom: 1px ridge;
-  max-height: 400px;
+  min-height: 400px;
 }
 
 .footer {
-  background-color: #D1C4E9;
+  background-color: #d1c3e9;
   margin: 0px auto;
-  padding: 20px 0px;
+  padding: 20px 0px 20px 0px;
 }
 
 .jumbotron {
+  padding: 70px 30px 70px 30xp;
   margin: 0px auto;
-  padding: 70px 30px;
-  background: #9575CD;
+  background: #9575cd;
   color: floralwhite;
 }
 
-address {
+.address {
   font-size: 80%;
   margin: 0px;
   color: #0f0f0f;
 }
 
 body {
+  /* Сверху | Справа | Снизу | Слева */
   padding: 50px 0px 0px 0px;
   z-index: 0;
 }
 
 .navbar-dark {
-  background-color: #512DA8;
+  background-color: #512da8;
 }
 
 .tab-content {
@@ -46,22 +47,23 @@ body {
 }
 
 .carousel {
-  background: #512DA8;
+  background: #512da8;
 }
-.carousel .carousel-item {
+
+.carousel-item {
   height: 300px;
 }
-.carousel .carousel-item img {
+
+.carousel-item img {
   position: absolute;
   top: 0;
   left: 0;
-  max-height: 300px;
+  min-height: 300px;
 }
 
 #carouselButton {
   right: 0px;
   position: absolute;
   bottom: 0px;
+  z-index: 1;
 }
-
-/*# sourceMappingURL=styles.css.map */
