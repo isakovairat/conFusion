@@ -3,15 +3,15 @@
 
 <head>
   <!-- Required meta tags always come first -->
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./node_modules/bootstrap-social/bootstrap-social.css" />
-  <link rel="stylesheet" href="css/styles-old.css" />
+  <link rel="stylesheet" href="css/styles.css" />
   <title>Ristorante Con Fusion</title>
 </head>
 
@@ -23,7 +23,6 @@
       </button>
       <a class="navbar-brand mr-auto" href="./index.html"><img src="img/logo.png" height="30" width="41"
           alt="logo" /></a>
-
       <div class="collapse navbar-collapse" id="Navbar">
         <ul class="navbar-nav mr-auto">
           <li class="nav-items active">
@@ -40,7 +39,7 @@
           </li>
         </ul>
         <span class="navbar-text">
-          <a data-toggle="modal" data-target="#loginModal">
+          <a id="loginModalBtn">
             <span class="fa fa-sign-in"></span> Login
           </a>
         </span>
@@ -53,7 +52,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Login</h4>
-          <button class="close" type="button" data-dismiss="modal">
+          <button class="close" type="button" id="loginModalBtnClose">
             &times;
           </button>
         </div>
@@ -121,7 +120,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h4 class="modal-title">Reserve a Table</h4>
-          <button class="close" type="button" data-dismiss="modal">
+          <button class="close" type="button" id="reserveModalBtnClose">
             &times;
           </button>
         </div>
@@ -443,6 +442,18 @@
   </script> -->
   <script>
     $(document).ready(function() {
+      $("#loginModalBtn").click(function(){
+        $("#loginModal").modal();
+      });
+      $("#loginModalBtnClose").click(function () {
+        $("#loginModal").modal('hide');
+      });
+      $("#reserveModalBtn").click(function(){
+        $("#reserveModal").modal();
+      });
+      $("#reserveModalBtnClose").click(function(){
+        $("#reserveModal").modal('hide');
+      });
       $('#mycarousel').carousel({ interval: 2000});
       $('#carouselButton').click(function () {
         if ($('#carouselButton').children('span').hasClass('fa-pause')) {
